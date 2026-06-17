@@ -1,0 +1,184 @@
+{
+  "lastUpdated": "2026-06-16T20:00:00-06:00",
+  "transfers": [
+    {
+      "id": "cucurella-real-madrid-2026",
+      "player": "Marc Cucurella",
+      "age": 27,
+      "position": "Lateral izquierdo",
+      "isYoung": false,
+      "from": "Chelsea",
+      "to": "Real Madrid",
+      "league": "LaLiga",
+      "fee": "€55M + €5M",
+      "feeNumeric": 60,
+      "tier": "cerrado",
+      "credibility": 100,
+      "date": "2026-06-15",
+      "sources": [
+        {
+          "name": "Real Madrid (oficial)",
+          "summary": "Anuncio oficial, contrato hasta 30 de junio de 2032",
+          "reliable": true,
+          "url": "https://www.realmadrid.com/"
+        },
+        {
+          "name": "Chelsea (oficial)",
+          "summary": "Comunicado de salida del jugador en redes oficiales",
+          "reliable": true,
+          "url": "https://www.chelseafc.com/"
+        }
+      ]
+    },
+    {
+      "id": "gordon-barcelona-2026",
+      "player": "Anthony Gordon",
+      "age": 25,
+      "position": "Extremo izquierdo",
+      "isYoung": false,
+      "from": "Newcastle United",
+      "to": "FC Barcelona",
+      "league": "LaLiga",
+      "fee": "€70M",
+      "feeNumeric": 70,
+      "tier": "cerrado",
+      "credibility": 100,
+      "date": "2026-05-29",
+      "sources": [
+        {
+          "name": "Newcastle United (oficial)",
+          "summary": "Comunicado confirmando el traspaso al Barcelona",
+          "reliable": true,
+          "url": ""
+        },
+        {
+          "name": "Sky Sports",
+          "summary": "Médica completada, firma de contrato por 5 años",
+          "reliable": true,
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "konate-real-madrid-2026",
+      "player": "Ibrahima Konaté",
+      "age": 27,
+      "position": "Defensa central",
+      "isYoung": false,
+      "from": "Liverpool",
+      "to": "Real Madrid",
+      "league": "LaLiga",
+      "fee": "Libre",
+      "feeNumeric": 0,
+      "tier": "casi",
+      "credibility": 85,
+      "date": "2026-06-15",
+      "sources": [
+        {
+          "name": "ESPN",
+          "summary": "Acuerdo cerrado entre clubes, pendiente anuncio oficial",
+          "reliable": true,
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "dumfries-real-madrid-2026",
+      "player": "Denzel Dumfries",
+      "age": 30,
+      "position": "Lateral derecho",
+      "isYoung": false,
+      "from": "Inter de Milán",
+      "to": "Real Madrid",
+      "league": "LaLiga",
+      "fee": "Por definir",
+      "feeNumeric": 30,
+      "tier": "casi",
+      "credibility": 85,
+      "date": "2026-06-15",
+      "sources": [
+        {
+          "name": "ESPN",
+          "summary": "Acuerdo entre clubes confirmado, falta firma",
+          "reliable": true,
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "bernardo-silva-real-madrid-2026",
+      "player": "Bernardo Silva",
+      "age": 31,
+      "position": "Centrocampista ofensivo",
+      "isYoung": false,
+      "from": "Manchester City",
+      "to": "Real Madrid",
+      "league": "LaLiga",
+      "fee": "Libre",
+      "feeNumeric": 0,
+      "tier": "casi",
+      "credibility": 90,
+      "date": "2026-06-15",
+      "sources": [
+        {
+          "name": "OneFootball",
+          "summary": "Acuerdo cerrado tras vencimiento de contrato en el Manchester City, pendiente anuncio oficial",
+          "reliable": true,
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "rashford-barcelona-2026",
+      "player": "Marcus Rashford",
+      "age": 28,
+      "position": "Extremo / delantero",
+      "isYoung": false,
+      "from": "Manchester United",
+      "to": "FC Barcelona",
+      "league": "LaLiga",
+      "fee": "Por definir",
+      "feeNumeric": 45,
+      "tier": "cerca",
+      "credibility": 60,
+      "date": "2026-05-30",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "summary": "Posible re-fichaje tras cesión exitosa la temporada pasada",
+          "reliable": true,
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "alvarez-barcelona-2026",
+      "player": "Julián Álvarez",
+      "age": 26,
+      "position": "Delantero centro",
+      "isYoung": false,
+      "from": "Atlético de Madrid",
+      "to": "FC Barcelona",
+      "league": "LaLiga",
+      "fee": "~€130M",
+      "feeNumeric": 130,
+      "tier": "rumor",
+      "credibility": 42,
+      "date": "2026-05-31",
+      "sources": [
+        {
+          "name": "Mundo Deportivo / ESPN",
+          "summary": "El jugador prefiere el Barça, rechaza a Arsenal y PSG",
+          "reliable": true,
+          "url": ""
+        },
+        {
+          "name": "Atlético de Madrid",
+          "summary": "Niega cualquier negociación, acusa al Barcelona de fake news",
+          "reliable": false,
+          "url": ""
+        }
+      ]
+    }
+  ]
+}

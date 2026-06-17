@@ -1,0 +1,588 @@
+/* ===========================================
+   EL MERCADO FC — Estilos
+   Paleta: dark theme con verde "money" como acento
+   =========================================== */
+
+:root {
+  --bg: #0a0e14;
+  --bg-2: #0d121a;
+  --panel: #121823;
+  --panel-2: #1a2230;
+  --line: #283143;
+  --line-strong: #3a465c;
+  --txt: #eef2f7;
+  --muted: #8a98ad;
+  --muted-2: #5d6a82;
+
+  /* Tier colors */
+  --rumor: #ff4d4d;
+  --cerca: #ffb020;
+  --casi: #3da5ff;
+  --cerrado: #1ee07d;
+  --accent: #1ee07d;
+
+  /* League colors (para badges) */
+  --laliga: #ff3b3b;
+  --premier: #38003c;
+  --seriea: #008fd7;
+  --bundesliga: #d20515;
+  --ligue1: #091c3e;
+
+  --radius: 18px;
+  --radius-sm: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(30, 224, 125, 0.08), transparent),
+    radial-gradient(900px 500px at -10% 10%, rgba(61, 165, 255, 0.06), transparent);
+  background-attachment: fixed;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ============ HEADER ============ */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(18, 24, 35, 0.92), rgba(10, 14, 20, 0.7));
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.live-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(30, 224, 125, 0.6);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(30, 224, 125, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(30, 224, 125, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(30, 224, 125, 0); }
+}
+
+.brand-name {
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  font-weight: 400;
+}
+.brand-name span { color: var(--accent); }
+
+.brand-tag {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.status {
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.status-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-size: 10px;
+}
+.status strong {
+  color: var(--txt);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ============ TABS ============ */
+.tabs {
+  display: flex;
+  gap: 6px;
+  padding: 0 0 16px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--txt);
+  border-color: var(--line-strong);
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #04130a;
+  border-color: var(--accent);
+}
+
+/* ============ INTRO ============ */
+.intro {
+  padding: 36px 0 8px;
+}
+
+.intro-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(34px, 6vw, 64px);
+  line-height: 0.95;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.intro-title em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.intro-text {
+  color: var(--muted);
+  max-width: 640px;
+  margin-top: 14px;
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+/* ============ LEGEND ============ */
+.legend {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 28px 0 8px;
+}
+
+.leg {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.leg small {
+  color: var(--muted);
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.sw {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.sw-rumor { background: var(--rumor); }
+.sw-cerca { background: var(--cerca); }
+.sw-casi { background: var(--casi); }
+.sw-cerrado { background: var(--cerrado); }
+
+/* ============ LEAGUE FILTERS ============ */
+.league-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 22px 0 0;
+}
+
+.league-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.league-btn:hover {
+  color: var(--txt);
+  border-color: var(--line-strong);
+}
+.league-btn.active {
+  background: var(--txt);
+  color: #04130a;
+  border-color: var(--txt);
+}
+
+/* ============ GRID ============ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 16px;
+  padding: 26px 0 70px;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  animation: rise 0.5s ease both;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger animation delay */
+.card:nth-child(1) { animation-delay: 0.04s; }
+.card:nth-child(2) { animation-delay: 0.08s; }
+.card:nth-child(3) { animation-delay: 0.12s; }
+.card:nth-child(4) { animation-delay: 0.16s; }
+.card:nth-child(5) { animation-delay: 0.20s; }
+.card:nth-child(6) { animation-delay: 0.24s; }
+.card:nth-child(7) { animation-delay: 0.28s; }
+.card:nth-child(8) { animation-delay: 0.32s; }
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+.card.tier-rumor::before { background: var(--rumor); }
+.card.tier-cerca::before { background: var(--cerca); }
+.card.tier-casi::before { background: var(--casi); }
+.card.tier-cerrado::before { background: var(--cerrado); }
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+.badge.tier-rumor { background: rgba(255, 77, 77, 0.14); color: var(--rumor); }
+.badge.tier-cerca { background: rgba(255, 176, 32, 0.14); color: var(--cerca); }
+.badge.tier-casi { background: rgba(61, 165, 255, 0.14); color: var(--casi); }
+.badge.tier-cerrado { background: rgba(30, 224, 125, 0.16); color: var(--cerrado); }
+
+.league-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--bg-2);
+  padding: 4px 9px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tag-young {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: #04130a;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.player {
+  font-family: 'Anton', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  margin: 12px 0 4px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.move {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+  font-weight: 600;
+  font-size: 14.5px;
+  flex-wrap: wrap;
+}
+
+.move .arrow {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.club-from { color: var(--muted); }
+.club-to { color: var(--txt); }
+
+.fee {
+  font-family: 'Anton', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.fee.fee-free {
+  color: var(--casi);
+}
+
+/* Credibility meter */
+.cred {
+  margin-top: 14px;
+}
+
+.cred-lbl {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cred-lbl b {
+  color: var(--txt);
+}
+
+.bar {
+  height: 8px;
+  background: #0c121b;
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.8s ease;
+}
+.card.tier-rumor .bar i { background: var(--rumor); }
+.card.tier-cerca .bar i { background: var(--cerca); }
+.card.tier-casi .bar i { background: var(--casi); }
+.card.tier-cerrado .bar i { background: var(--cerrado); }
+
+/* Sources */
+.sources {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.src-title {
+  font-size: 10.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.src {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.src:last-child { margin-bottom: 0; }
+
+.src .ic {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.src .yes { background: rgba(30, 224, 125, 0.18); color: var(--cerrado); }
+.src .no { background: rgba(255, 77, 77, 0.18); color: var(--rumor); }
+
+.src b { font-weight: 700; }
+.src span { color: var(--muted); }
+
+/* ============ EMPTY STATE ============ */
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ============ FOOTER ============ */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+  padding: 40px 0 24px;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.footer-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.site-footer p, .site-footer li {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.site-footer ul {
+  list-style: none;
+}
+
+.site-footer li {
+  padding: 4px 0;
+}
+
+.site-footer li b {
+  color: var(--txt);
+  font-weight: 700;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  font-size: 12px !important;
+  color: var(--muted-2) !important;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+  .header-row { padding: 14px 0; }
+  .brand-name { font-size: 24px; }
+  .status { display: none; }
+  .tabs { gap: 5px; }
+  .tab { padding: 8px 13px; font-size: 12.5px; }
+  .intro { padding: 24px 0 0; }
+  .legend { gap: 8px; }
+  .leg { font-size: 12px; padding: 8px 11px; }
+  .leg small { display: none; }
+  .grid { gap: 14px; padding: 22px 0 50px; }
+  .card { padding: 16px; }
+  .player { font-size: 22px; }
+  .footer-grid { gap: 22px; }
+}
+
+/* ============ ACCESIBILIDAD ============ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
